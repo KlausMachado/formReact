@@ -21,9 +21,11 @@ const Div = styled.div`
   justify-content: center;
   flex-direction: column;
   padding-top: 25%;
-  margin-right: 2rem;
+  padding-left: 5%;
+  margin-right: 0.8rem;
   color: #fff;
 `;
 const H1 = styled.h1`
   font-size: 42px;
+  line-height: 3rem;
 `;

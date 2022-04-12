@@ -6,33 +6,29 @@ export const Form = () => {
       <Div>
         <Button>
           <span style={{ fontWeight: "bold" }}>Try it free 7 days</span> then
-          $20/mo. thereafter{" "}
+          $20/mo. thereafter
         </Button>
 
         <FormStyle action="">
-          <label htmlFor="name" hidden>
-            Firt Name
-          </label>
           <Input type="text" name="name" id="name" />
-          <label htmlFor="lastName" hidden>
-            Last Name
-          </label>
+          <Label htmlFor="name">Firt Name</Label>
+
           <Input type="text" name="lastName" id="lastName" />
-          <label htmlFor="email" hidden>
-            Email
-          </label>
-          <Input type="email" name="email" id="email" />
-          <label htmlFor="password" hidden>
-            Password
-          </label>
+          <Label htmlFor="lastName">Last Name</Label>
+
+          <Input type="email" name="email" id="email" placeholder="email@example/com"/>
+          <Label htmlFor="email">Email</Label>
+
           <Input type="password" name="password" id="password" />
-          <label htmlFor="submit" hidden>
-            Submit
-          </label>
+          <Label htmlFor="password">Password</Label>
+
           <InputSubmit type="submit" value="CLAIM YOUR FREE TRIAL" />
+          <Label htmlFor="submit" hidden>
+            Submit
+          </Label>
           <P>
-            By clicking the button, you are agreeing to our{" "}
-            <a href="#">Terms and Services</a>
+            By clicking the button, you are agreeing to our
+            <A href="#">Terms and Services</A>
           </P>
         </FormStyle>
       </Div>
@@ -46,10 +42,11 @@ const Div = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
+
 const FormStyle = styled.form`
   background: #fff;
   margin-top: 1.5rem;
-  padding: 2rem 1rem;
+  padding: 2.5rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,16 +56,31 @@ const FormStyle = styled.form`
 `;
 
 const Input = styled.input`
-  margin-bottom: 1.5rem;
   border-radius: 5px;
-  height: 35px;
+  height: 50px;
   width: 85%;
   border: 1.8px solid hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+  &::placeholder {
+    color: hsl(0, 100%, 74%);
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 15px;
+  }
 `;
+
+const Label = styled.label`
+  margin-bottom: 2rem;
+  margin-right: -15rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(0, 100%, 74%);
+`;
+
 const InputSubmit = styled.input`
   border-radius: 5px;
   color: #fff;
-  height: 40px;
+  height: 50px;
   width: 85%;
   background-color: hsl(154, 59%, 51%);
   border: none;
@@ -78,10 +90,18 @@ const InputSubmit = styled.input`
 `;
 
 const P = styled.p`
-  font-size: 12px;
-  margin-top: 0;
+  font-size: 10px;
+  margin-top: 15px;
+  margin-left: 45px;
   padding-top: 1px;
-  width: 85%;
+  width: 70%;
+  color: hsl(246, 25%, 77%);
+`;
+
+const A = styled.a`
+  text-decoration: none;
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
 `;
 
 const Button = styled.button`
