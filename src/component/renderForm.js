@@ -22,5 +22,13 @@ const Section = styled.section`
   background-image: url(${img});
   background-color: hsl(0, 100%, 74%);
   padding: 5rem;
-  height: 90vh;
+  height: 100%;
+
+  @media (max-width: 780px) {
+    flex-wrap: wrap;
+    background-color: hsl(0, 100%, 74%);
+    width: 100vw;
+    heigth: 100%;
+    padding: 0;
+  }
 `;

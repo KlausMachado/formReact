@@ -5,8 +5,10 @@ export const Form = () => {
     <>
       <Div>
         <Button>
-          <span style={{ fontWeight: "bold" }}>Try it free 7 days</span> then
-          $20/mo. thereafter
+          <span style={{ fontWeight: "600", color: "#fff" }}>
+            Try it free 7 days
+          </span>{" "}
+          then $20/mo. thereafter
         </Button>
 
         <FormStyle action="">
@@ -16,7 +18,12 @@ export const Form = () => {
           <Input type="text" name="lastName" id="lastName" />
           <Label htmlFor="lastName">Last Name</Label>
 
-          <Input type="email" name="email" id="email" placeholder="email@example/com"/>
+          <Input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@example/com"
+          />
           <Label htmlFor="email">Email</Label>
 
           <Input type="password" name="password" id="password" />
@@ -41,6 +48,16 @@ const Div = styled.div`
   align-itens: center;
   justify-content: center;
   flex-direction: column;
+  @media (max-width: 780px) {
+    width: 50vw;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  @media (max-width: 425px) {
+    width: 80vw;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
 `;
 
 const FormStyle = styled.form`
@@ -53,6 +70,14 @@ const FormStyle = styled.form`
   flex-direction: column;
   width: 40vw;
   border-radius: 10px;
+  @media (max-width: 780px) {
+    width: 50vw;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+  }
+  @media (max-width: 425px) {
+    width: 80vw;
+  }
 `;
 
 const Input = styled.input`
@@ -105,11 +130,11 @@ const A = styled.a`
 `;
 
 const Button = styled.button`
-  height: 50px;
+  height: 55px;
   border-radius: 5px;
   border: none;
   background: hsl(248, 32%, 49%);
-  color: #fff;
+  color: hsl(246, 25%, 77%);
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
