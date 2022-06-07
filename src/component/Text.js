@@ -20,15 +20,15 @@ const Div = styled.div`
   align-itens: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 25%;
-  padding-left: 5%;
+  padding-top: 0.25rem;
+  padding-left: 0.05rem;
   margin-right: 0.8rem;
   color: #fff;
   @media (max-width: 780px) {
     width: 50vw;
     heigth: 40vh;
-    padding-top: 2%;
-    margin-bottom: 10px;
+    padding-top: 0.02rem;
+    margin-bottom: 0.625rem;
   }
 
   @media (max-width: 425px) {
@@ -37,9 +37,9 @@ const Div = styled.div`
   }
 `;
 const H1 = styled.h1`
-  font-size: 42px;
+  font-size: 2.625rem;
   line-height: 3rem;
   @media (max-width: 780px) {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
   }
 `;

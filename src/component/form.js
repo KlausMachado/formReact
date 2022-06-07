@@ -4,8 +4,8 @@ export const Form = () => {
   return (
     <>
       <Div>
-        <Button>
-          <span style={{ fontWeight: "600", color: "#fff",  }}>
+        <Button style={{ cursor: "pointer" }}>
+          <span style={{ fontWeight: "600", color: "#fff" }}>
             Try it free 7 days
           </span>{" "}
           then $20/mo. thereafter
@@ -13,10 +13,14 @@ export const Form = () => {
 
         <FormStyle action="">
           <Input type="text" name="name" id="name" />
-          <Label htmlFor="name">Firt Name</Label>
+          <label htmlFor="name" hidden>
+            Firt Name
+          </label>
 
           <Input type="text" name="lastName" id="lastName" />
-          <Label htmlFor="lastName">Last Name</Label>
+          <label htmlFor="lastName" hidden>
+            Last Name
+          </label>
 
           <Input
             type="email"
@@ -24,15 +28,23 @@ export const Form = () => {
             id="email"
             placeholder="email@example/com"
           />
-          <Label htmlFor="email">Email</Label>
+          <label htmlFor="email" hidden>
+            Email
+          </label>
 
           <Input type="password" name="password" id="password" />
-          <Label htmlFor="password">Password</Label>
+          <label htmlFor="password" hidden>
+            Password
+          </label>
 
-          <InputSubmit type="submit" value="CLAIM YOUR FREE TRIAL" />
-          <Label htmlFor="submit" hidden>
+          <InputSubmit
+            type="submit"
+            value="CLAIM YOUR FREE TRIAL"
+            style={{ cursor: "pointer" }}
+          />
+          <label htmlFor="submit" hidden>
             Submit
-          </Label>
+          </label>
           <P>
             By clicking the button, you are agreeing to our
             <A href="#">Terms and Services</A>
@@ -51,12 +63,12 @@ const Div = styled.div`
   @media (max-width: 780px) {
     width: 50vw;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
   @media (max-width: 425px) {
     width: 80vw;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
 `;
 
@@ -82,43 +94,36 @@ const FormStyle = styled.form`
 
 const Input = styled.input`
   border-radius: 5px;
-  height: 50px;
+  margin-bottom: 2rem;
+  height: 3.125rem;
   width: 85%;
   border: 1.8px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
   &::placeholder {
     color: hsl(0, 100%, 74%);
-    padding-left: 10px;
+    padding-left: 0.625rem;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
-`;
-
-const Label = styled.label`
-  margin-bottom: 2rem;
-  margin-right: -15rem;
-  font-size: 12px;
-  font-weight: 500;
-  color: hsl(0, 100%, 74%);
 `;
 
 const InputSubmit = styled.input`
   border-radius: 5px;
   color: #fff;
-  height: 50px;
+  height: 3.125rem;
   width: 85%;
   background-color: hsl(154, 59%, 51%);
   border: none;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.75rem;
 `;
 
 const P = styled.p`
-  font-size: 10px;
-  margin-top: 15px;
-  margin-left: 45px;
-  padding-top: 1px;
+  font-size: 0.625rem;
+  margin-top: 0.9375rem;
+  margin-left: 2.8125rem;
+  padding-top: 0.0625rem;
   width: 70%;
   color: hsl(246, 25%, 77%);
 `;
@@ -130,12 +135,12 @@ const A = styled.a`
 `;
 
 const Button = styled.button`
-  height: 55px;
-  border-radius: 5px;
+  height: 3.4275rem;
+  border-radius: 0.3125rem;
   border: none;
   background: hsl(248, 32%, 49%);
   color: hsl(246, 25%, 77%);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 `;
