@@ -4,7 +4,7 @@ export const Form = () => {
   return (
     <>
       <Div>
-        <Button style={{ cursor: "pointer" }}>
+        <Button>
           <span style={{ fontWeight: "600", color: "#fff" }}>
             Try it free 7 days
           </span>{" "}
@@ -12,12 +12,17 @@ export const Form = () => {
         </Button>
 
         <FormStyle action="">
-          <Input type="text" name="name" id="name" />
+          <Input type="text" name="name" id="name" placeholder="Firt Name" />
           <label htmlFor="name" hidden>
             Firt Name
           </label>
 
-          <Input type="text" name="lastName" id="lastName" />
+          <Input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+          />
           <label htmlFor="lastName" hidden>
             Last Name
           </label>
@@ -32,7 +37,12 @@ export const Form = () => {
             Email
           </label>
 
-          <Input type="password" name="password" id="password" />
+          <Input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
           <label htmlFor="password" hidden>
             Password
           </label>
@@ -99,7 +109,7 @@ const Input = styled.input`
   width: 85%;
   border: 1.8px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
-  &::placeholder {
+  ::placeholder {
     color: hsl(0, 100%, 74%);
     padding-left: 0.625rem;
     font-weight: 600;
@@ -117,6 +127,9 @@ const InputSubmit = styled.input`
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
+  :hover {
+    background: hsl(154, 56%, 37%);
+  }
 `;
 
 const P = styled.p`
@@ -143,4 +156,8 @@ const Button = styled.button`
   font-size: 0.9375rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  cursor: pointer;
+  :hover {
+    background: hsl(248, 44%, 33%);
+  }
 `;
