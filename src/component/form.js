@@ -5,7 +5,7 @@ export const Form = () => {
     <>
       <Div>
         <Button>
-          <span style={{ fontWeight: "600", color: "#fff" }}>
+          <span style={{ fontWeight: "600", color: "#fff",  }}>
             Try it free 7 days
           </span>{" "}
           then $20/mo. thereafter
