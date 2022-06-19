@@ -80,6 +80,9 @@ const Div = styled.div`
     margin-top: 0;
     margin-bottom: 3.125rem;
   }
+  @media (max-width: 320px) {
+    margin-bottom: 4.125rem;
+  }
 `;
 
 const FormStyle = styled.form`
@@ -139,6 +142,16 @@ const P = styled.p`
   padding-top: 0.0625rem;
   width: 70%;
   color: hsl(246, 25%, 77%);
+
+  @media (max-width: 1024px) {
+    margin-left: .8125rem;
+  }
+  @media (max-width: 425px) {
+    margin-left: 2rem;
+  }
+  @media (max-width: 320px) {
+    margin-left: 0.5rem;
+  }
 `;
 
 const A = styled.a`

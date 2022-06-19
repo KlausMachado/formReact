@@ -30,4 +30,7 @@ const Section = styled.section`
     heigth: 100vh;
     padding: 0;
   }
+  @media (max-width: 320px) {
+    padding-bottom: 5rem;
+  }
 `;
