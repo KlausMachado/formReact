@@ -12,7 +12,8 @@ export const Form = () => {
         </Button>
 
         <FormStyle action="">
-          <Input type="text" name="name" id="name" placeholder="Firt Name" />
+          <Input type="text" name="name" id="name" placeholder="First Name" />
+          <P2>insert a first name</P2>
           <label htmlFor="name" hidden>
             Firt Name
           </label>
@@ -23,6 +24,8 @@ export const Form = () => {
             id="lastName"
             placeholder="Last Name"
           />
+          <P2>insert a last name</P2>
+
           <label htmlFor="lastName" hidden>
             Last Name
           </label>
@@ -33,6 +36,8 @@ export const Form = () => {
             id="email"
             placeholder="email@example/com"
           />
+          <P2>insert a email</P2>
+
           <label htmlFor="email" hidden>
             Email
           </label>
@@ -43,6 +48,8 @@ export const Form = () => {
             id="password"
             placeholder="Password"
           />
+          <P2>insert a password </P2>
+
           <label htmlFor="password" hidden>
             Password
           </label>
@@ -107,7 +114,6 @@ const FormStyle = styled.form`
 
 const Input = styled.input`
   border-radius: 5px;
-  margin-bottom: 2rem;
   height: 3.125rem;
   width: 85%;
   border: 1.8px solid hsl(0, 100%, 74%);
@@ -144,7 +150,7 @@ const P = styled.p`
   color: hsl(246, 25%, 77%);
 
   @media (max-width: 1024px) {
-    margin-left: .8125rem;
+    margin-left: 0.8125rem;
   }
   @media (max-width: 425px) {
     margin-left: 2rem;
@@ -152,6 +158,15 @@ const P = styled.p`
   @media (max-width: 320px) {
     margin-left: 0.5rem;
   }
+`;
+
+const P2 = styled.p`
+  font-size: 0.625rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 18rem;
+  color: hsl(0, 100%, 74%);
+
 `;
 
 const A = styled.a`
