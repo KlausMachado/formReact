@@ -20,7 +20,7 @@ const Div = styled.div`
   align-itens: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 15rem;
+  padding-top: 18rem;
   padding-left: 0.05rem;
   margin-right: 0.8rem;
   color: #fff;

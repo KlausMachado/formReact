@@ -23,7 +23,6 @@ export const Form = () => {
             id="lastName"
             placeholder="Last Name"
           />
-
           <label htmlFor="lastName" hidden>
             Last Name
           </label>
@@ -34,7 +33,6 @@ export const Form = () => {
             id="email"
             placeholder="email@example/com"
           />
-
           <label htmlFor="email" hidden>
             Email
           </label>
@@ -45,7 +43,6 @@ export const Form = () => {
             id="password"
             placeholder="Password"
           />
-
           <label htmlFor="password" hidden>
             Password
           </label>

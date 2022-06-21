@@ -21,6 +21,7 @@ const Section = styled.section`
   background-image: url(${img});
   background-color: hsl(0, 100%, 74%);
   padding: 5rem;
+  padding-top: 0;
   height: 100vh;
 
   @media (max-width: 780px) {
