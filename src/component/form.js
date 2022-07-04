@@ -1,6 +1,10 @@
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
 
-export const Form = () => {
+export const GetForm = () => {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = userData => console.log(userData);
+
   return (
     <>
       <Div>
@@ -11,8 +15,8 @@ export const Form = () => {
           then $20/mo. thereafter
         </Button>
 
-        <FormStyle action="">
-          <Input type="text" name="name" id="name" placeholder="First Name" />
+        <Form action="" onSubmit={handleSubmit(onSubmit)}>
+          <Input type="text" name="name" id="name" placeholder="First Name" {...register("firstName", { required: true })}/>
           <label htmlFor="name" hidden>
             Firt Name
           </label>
@@ -22,6 +26,7 @@ export const Form = () => {
             name="lastName"
             id="lastName"
             placeholder="Last Name"
+            {...register("lastName", { required: true })}
           />
           <label htmlFor="lastName" hidden>
             Last Name
@@ -32,6 +37,7 @@ export const Form = () => {
             name="email"
             id="email"
             placeholder="email@example/com"
+            {...register("email" , { required: true })}
           />
           <label htmlFor="email" hidden>
             Email
@@ -42,6 +48,7 @@ export const Form = () => {
             name="password"
             id="password"
             placeholder="Password"
+            {...register("password" , { required: true })}
           />
           <label htmlFor="password" hidden>
             Password
@@ -59,7 +66,7 @@ export const Form = () => {
             By clicking the button, you are agreeing to our
             <A href="#">Terms and Services</A>
           </P>
-        </FormStyle>
+        </Form>
       </Div>
     </>
   );
@@ -85,7 +92,7 @@ const Div = styled.div`
   }
 `;
 
-const FormStyle = styled.form`
+const Form = styled.form`
   background: #fff;
   margin-top: 1.5rem;
   padding: 2.5rem 0.5rem;

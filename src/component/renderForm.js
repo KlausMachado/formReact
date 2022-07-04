@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Form } from "./form";
+import { GetForm } from "./form";
 import { Text } from "./Text";
 import img from "../images/bg-intro-desktop.png";
 
@@ -8,7 +8,7 @@ export const RenderForm = () => {
     <>
       <Section>
         <Text />
-        <Form />
+        <GetForm />
       </Section>
     </>
   );

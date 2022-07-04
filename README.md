@@ -15,7 +15,7 @@
 
 ## 📑 Sobre
 
-O projeto **Form** será um formulario, que possuirá validação de informações preenchidas. 
+O projeto **Form** será um formulario, que possuirá validação de informações preenchidas. A validação é feita usando React-hook-form, o que facilitou o tratamento de erros do usuario ao preencher o formulario. 
 
 ---
 
@@ -24,6 +24,7 @@ O projeto **Form** será um formulario, que possuirá validação de informaçõ
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [ReactJS](https://reactjs.org)
+- [react-hook-form](https://react-hook-form.com/get-started)
 ---
 
 ## 🗂 Como baixar o projeto
