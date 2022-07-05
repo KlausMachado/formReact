@@ -15,6 +15,7 @@ function App() {
 const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box
 }
 `
 

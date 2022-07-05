@@ -2,8 +2,13 @@ import styled from "styled-components";
 import { useForm } from "react-hook-form";
 
 export const GetForm = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = userData => console.log(userData);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (userData) => console.log(userData);
 
   return (
     <>
@@ -16,7 +21,14 @@ export const GetForm = () => {
         </Button>
 
         <Form action="" onSubmit={handleSubmit(onSubmit)}>
-          <Input type="text" name="name" id="name" placeholder="First Name" {...register("firstName", { required: true })}/>
+          <Input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="First Name"
+            {...register("firstName", { required: true })}
+          />
+          {errors.firstName && <P2>First name is required !</P2>}
           <label htmlFor="name" hidden>
             Firt Name
           </label>
@@ -28,6 +40,8 @@ export const GetForm = () => {
             placeholder="Last Name"
             {...register("lastName", { required: true })}
           />
+          {errors.lastName && <P2>Last name is required !</P2>}
+
           <label htmlFor="lastName" hidden>
             Last Name
           </label>
@@ -37,8 +51,10 @@ export const GetForm = () => {
             name="email"
             id="email"
             placeholder="email@example/com"
-            {...register("email" , { required: true })}
+            {...register("email", { required: true })}
           />
+          {errors.lastName && <P2>Email is required !</P2>}
+
           <label htmlFor="email" hidden>
             Email
           </label>
@@ -48,8 +64,10 @@ export const GetForm = () => {
             name="password"
             id="password"
             placeholder="Password"
-            {...register("password" , { required: true })}
+            {...register("password", { required: true })}
           />
+          {errors.lastName && <P2>Password is required !</P2>}
+
           <label htmlFor="password" hidden>
             Password
           </label>
@@ -115,7 +133,7 @@ const Form = styled.form`
 const Input = styled.input`
   border-radius: 5px;
   height: 3.125rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   width: 85%;
   border: 1.8px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
@@ -124,6 +142,10 @@ const Input = styled.input`
     padding-left: 0.625rem;
     font-weight: 600;
     font-size: 0.9375rem;
+  }
+  :focus {
+    outline: none;
+    box-shadow: -1px 3px 5px hsl(0, 93%, 65%);
   }
 `;
 
@@ -158,6 +180,23 @@ const P = styled.p`
   }
   @media (max-width: 320px) {
     margin-left: 0.5rem;
+  }
+`;
+
+const P2 = styled.p`
+  font-size: 0.725rem;
+  color: hsl(0, 100%, 74%);
+  margin-top: -1rem;
+  margin-left: 20rem;
+
+  @media (max-width: 1024px) {
+    margin-left: 13rem;
+  }
+  @media (max-width: 425px) {
+    margin-left: 9rem;
+  }
+  @media (max-width: 320px) {
+    margin-left: 4rem;
   }
 `;
 
