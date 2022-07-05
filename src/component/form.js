@@ -1,13 +1,26 @@
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup
+  .object({
+    firstName: yup.string().required("First name is required !"),
+    lastName: yup.string().required("Last name is required !"),
+    email: yup.string().email("invalid email").required("Email is required !"),
+    password: yup
+      .string()
+      .min(8, "minimum 8 digits")
+      .required("Password is required !"),
+  })
+  .required();
 
 export const GetForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: yupResolver(schema) });
   const onSubmit = (userData) => console.log(userData);
 
   return (
@@ -28,7 +41,7 @@ export const GetForm = () => {
             placeholder="First Name"
             {...register("firstName", { required: true })}
           />
-          {errors.firstName && <P2>First name is required !</P2>}
+          {errors.firstName && <Span>{errors.firstName?.message}</Span>}
           <label htmlFor="name" hidden>
             Firt Name
           </label>
@@ -40,20 +53,20 @@ export const GetForm = () => {
             placeholder="Last Name"
             {...register("lastName", { required: true })}
           />
-          {errors.lastName && <P2>Last name is required !</P2>}
+          {errors.lastName && <Span>{errors.lastName?.message}</Span>}
 
           <label htmlFor="lastName" hidden>
             Last Name
           </label>
 
           <Input
-            type="email"
+            type="text"
             name="email"
             id="email"
             placeholder="email@example/com"
             {...register("email", { required: true })}
           />
-          {errors.lastName && <P2>Email is required !</P2>}
+          {errors.email && <Span>{errors.email?.message}</Span>}
 
           <label htmlFor="email" hidden>
             Email
@@ -66,7 +79,7 @@ export const GetForm = () => {
             placeholder="Password"
             {...register("password", { required: true })}
           />
-          {errors.lastName && <P2>Password is required !</P2>}
+          {errors.password && <Span>{errors.password?.message}</Span>}
 
           <label htmlFor="password" hidden>
             Password
@@ -134,6 +147,7 @@ const Input = styled.input`
   border-radius: 5px;
   height: 3.125rem;
   margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
   width: 85%;
   border: 1.8px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
@@ -152,6 +166,7 @@ const Input = styled.input`
 const InputSubmit = styled.input`
   border-radius: 5px;
   color: #fff;
+  margin-top: 0.5rem;
   height: 3.125rem;
   width: 85%;
   background-color: hsl(154, 59%, 51%);
@@ -183,11 +198,19 @@ const P = styled.p`
   }
 `;
 
-const P2 = styled.p`
+const Span = styled.span`
   font-size: 0.725rem;
   color: hsl(0, 100%, 74%);
   margin-top: -1rem;
   margin-left: 20rem;
+
+  @media (max-width: 2560px) {
+    margin-left: 45rem;
+  }
+
+  @media (max-width: 1440px) {
+    margin-left: 22rem;
+  }
 
   @media (max-width: 1024px) {
     margin-left: 13rem;
