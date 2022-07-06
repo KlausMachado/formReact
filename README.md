@@ -1,12 +1,6 @@
 <h1 align="center">
     Formulario React
 </h1>
-
-<h1>
-   🛠️ Projeto em andamento 🛠️
-</h1>
-
-
 # Indice
 
 - [Sobre](#-sobre)
@@ -25,6 +19,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [ReactJS](https://reactjs.org)
 - [react-hook-form](https://react-hook-form.com/get-started)
+- [styled-components](https://styled-components.com/)
 ---
 
 ## 🗂 Como baixar o projeto
